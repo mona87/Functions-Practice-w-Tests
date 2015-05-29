@@ -48,23 +48,23 @@ describe('isVowel', function(){
 		it('should throw an error if not a string length is greater than one', function(){
 			expect(function() {isVowel('bb')}).to.throw('Invalid Input');
 		});
-		it('should return true if a vowel'), function(){
-			expect(function() {isVowel('a')}).to.equal(true);
-			expect(function() {isVowel('A')}).to.equal(true);
-			expect(function() {isVowel('e')}).to.equal(true);
-			expect(function() {isVowel('e')}).to.equal(true);
-			expect(function() {isVowel('i')}).to.equal(true);
-			expect(function() {isVowel('I')}).to.equal(true);
-			expect(function() {isVowel('o')}).to.equal(true);
-			expect(function() {isVowel('O')}).to.equal(true);
-			expect(function() {isVowel('u')}).to.equal(true);
-			expect(function() {isVowel('U')}).to.equal(true);
-		}
-		it('should return false if a consanant'), function(){
-			expect(function() {isVowel('d')}).to.equal(false);
-			expect(function() {isVowel('Z')}).to.equal(false);
-			expect(function() {isVowel('x')}).to.equal(false);
-		}
+		it('should return true if a vowel', function(){
+			expect(isVowel('a')).to.be.true;
+			expect(isVowel('A')).to.be.true;
+			expect(isVowel('e')).to.be.true;
+			expect(isVowel('E')).to.be.true;
+			expect(isVowel('i')).to.be.true;
+			expect(isVowel('I')).to.be.true;
+			expect(isVowel('o')).to.be.true;
+			expect(isVowel('O')).to.be.true;
+			expect(isVowel('u')).to.be.true;
+			expect(isVowel('U')).to.be.true;
+		});
+		it('should return false if a consonant', function(){
+			expect(isVowel('D')).to.be.false;
+			expect(isVowel('X')).to.be.false;
+			expect(isVowel('p')).to.be.false;
+		});
 });
 
 describe('rovarspraket', function(){

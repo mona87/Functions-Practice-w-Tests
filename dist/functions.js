@@ -38,7 +38,23 @@ function max(a,b){
 
 function maxOfThree(a,b,c){
     "use strict";
-    //...
+
+    if(typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number'){
+        throw 'Invalid Input'
+    }
+    else if(a === false || b === false || c == false){
+        throw 'Invalid Input'
+    }
+    else if(a > b && a > c){
+        return a
+    }else if(b > a && b > c){
+        return b
+    }else if(c > a && c > b ){
+        return c
+    }else{
+        return 'No max!'
+    }
+    
 }
 
 // ---------------------
@@ -47,7 +63,31 @@ function maxOfThree(a,b,c){
 
 function isVowel(char){
     "use strict";
-    //...
+
+    if(typeof char !== 'string'){
+        throw 'Invalid Input'
+    }
+    else if(char.length > 1){
+        throw 'Invalid Input'
+    }
+    else if( char === 'a' || char === 'A'){
+        return true
+    }
+    else if( char === 'e' || char === 'E'){
+        return true
+    }
+    else if( char === 'i' || char === 'I'){
+        return true
+    }
+    else if( char === 'o' || char === 'O'){
+        return true
+    }
+    else if( char === 'u' || char === 'U'){
+        return true
+    }
+    else{
+        return false
+    }
 }
 
 // ---------------------
@@ -56,7 +96,21 @@ function isVowel(char){
 
 function rovarspraket(phrase){
     "use strict";
-    //...
+
+    var array =[];
+
+    if(typeof phrase !== 'string'){
+        throw 'Invalid Input'
+    }
+    else{
+        for(var i = 0; i< phrase.length; i++){
+            array.push(phrase[i]);
+            array.push('o');
+            array.push(phrase[i]);
+        }
+    }
+    console.log(array.toString());
+    return array.toString();
 }
 
 // ---------------------
